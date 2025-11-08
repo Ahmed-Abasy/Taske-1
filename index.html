@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Gallery — CodeAlpha Task 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Image Gallery</h1>
+      <p class="subtitle">
+        Responsive grid • Lightbox • Filters • Smooth transitions
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="nature">Nature</button>
+        <button class="chip" data-filter="city">City</button>
+        <button class="chip" data-filter="animals">Animals</button>
+      </section>
+
+      <section class="grid" id="gallery" aria-label="Image Gallery">
+        <!-- Nature -->
+        <figure class="card" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=60"
+            alt="Forest in morning light"
+          />
+          <figcaption>Forest</figcaption>
+        </figure>
+        <figure class="card" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=60"
+            alt="Mountain lake"
+          />
+          <figcaption>Lake</figcaption>
+        </figure>
+        <figure class="card" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=60"
+            alt="Green valley"
+          />
+          <figcaption>Valley</figcaption>
+        </figure>
+
+        <!-- City -->
+        <figure class="card" data-category="city">
+          <img
+            src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&auto=format&fit=crop&q=60"
+            alt="City skyline at sunset"
+          />
+          <figcaption>Skyline</figcaption>
+        </figure>
+        <figure class="card" data-category="city">
+          <img
+            src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&auto=format&fit=crop&q=60"
+            alt="Street with neon lights"
+          />
+          <figcaption>Streets</figcaption>
+        </figure>
+        <figure class="card" data-category="city">
+          <img
+            src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&auto=format&fit=crop&q=60"
+            alt="Bridge at night"
+          />
+          <figcaption>Bridge</figcaption>
+        </figure>
+
+        <!-- Animals -->
+        <figure class="card" data-category="animals">
+          <img
+            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800&auto=format&fit=crop&q=60"
+            alt="Dog in a field"
+          />
+          <figcaption>Dog</figcaption>
+        </figure>
+        <figure class="card" data-category="animals">
+          <img
+            src="https://images.unsplash.com/photo-1501706362039-c06b2d715385?w=800&auto=format&fit=crop&q=60"
+            alt="Cat staring"
+          />
+          <figcaption>Cat</figcaption>
+        </figure>
+        <figure class="card" data-category="animals">
+          <img
+            src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&auto=format&fit=crop&q=60"
+            alt="Parrot close-up"
+          />
+          <figcaption>Parrot</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      hidden
+    >
+      <button class="lb-btn prev" aria-label="Previous image">‹</button>
+      <img id="lightbox-image" alt="" />
+      <button class="lb-btn next" aria-label="Next image">›</button>
+      <button class="lb-btn close" aria-label="Close">×</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
